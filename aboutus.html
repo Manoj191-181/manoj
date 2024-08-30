@@ -23,14 +23,22 @@
       transform: scale(1.05);
       transition: all 0.3s ease;
     }
+    @media (max-width: 768px) {
+      .neon-border {
+        box-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      }
+      .neon-text {
+        text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+      }
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col">
   <!-- Header section -->
   <header class="bg-gray-900 p-4">
-    <nav class="container mx-auto flex justify-between items-center">
-      <a href="index.htm" class="text-2xl font-bold neon-text">CodeCraft</a>
-      <ul class="flex space-x-6">
+    <nav class="container mx-auto flex flex-wrap justify-between items-center">
+      <a href="index.htm" class="text-2xl font-bold neon-text mb-2 md:mb-0">CodeCraft</a>
+      <ul class="flex flex-wrap space-x-4 md:space-x-6">
         <li><a href="index.htm" class="hover:text-cyan-400 transition">Home</a></li>
         <li><a href="aboutus.html" class="hover:text-cyan-400 transition">About</a></li> <li><a href="blog.html" class="hover:text-cyan-400 transition">Blog</a></li>
         <li><a href="contact.html" class="hover:text-cyan-400 transition">Contact</a></li>
@@ -42,11 +50,11 @@
   <!-- Main content -->
   <main class="flex-grow container mx-auto px-4 py-8">
     <div class="text-center mb-12">
-      <h1 class="text-5xl font-bold mb-4 neon-text">About CodeCraft Gaming</h1>
-      <p class="text-xl">Discover our passion for coding and gaming</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4 neon-text">About CodeCraft Gaming</h1>
+      <p class="text-lg md:text-xl">Discover our passion for coding and gaming</p>
     </div>
 
-    <div class="grid md:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
       <div class="bg-gray-800 p-6 rounded-lg neon-border">
         <h2 class="text-2xl font-bold mb-4">Our Mission</h2>
         <p class="mb-4">At CodeCraft Gaming, we aim to bridge the gap between coding and gaming, creating a unique platform for learning and entertainment.</p>
