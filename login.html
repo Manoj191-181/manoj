@@ -61,6 +61,20 @@
   .btn-animated {
     animation: pulse 2s infinite;
   }
+
+  /* Add these new styles */
+  @media (max-width: 640px) {
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+    nav ul {
+        display: none;
+    }
+    .mobile-menu-button {
+        display: block;
+    }
+  }
     </style>
 </head>
 <body class="min-h-screen flex flex-col cyber-grid">
@@ -68,7 +82,12 @@
     <header class="bg-gray-900 p-4">
         <nav class="container mx-auto flex justify-between items-center">
             <a href="index.htm" class="text-2xl font-bold neon-text">CodeCraft</a>
-            <ul class="flex space-x-6">
+            <button class="mobile-menu-button text-white lg:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                </svg>
+            </button>
+            <ul class="hidden lg:flex space-x-6">
                 <li><a href="index.htm" class="hover:text-cyan-400 transition">Home</a></li>
                 <li><a href="blog.html" class="hover:text-cyan-400 transition">Blog</a></li>
                 <li><a href="aboutus.html" class="hover:text-cyan-400 transition">About</a></li>
@@ -80,7 +99,7 @@
 
     <!-- Main content -->
     <main class="flex-grow container mx-auto px-4 py-8 flex items-center justify-center">
-        <div class="bg-gray-800 p-8 rounded-lg neon-border max-w-md w-full">
+        <div class="bg-gray-800 p-8 rounded-lg neon-border w-full max-w-md">
             <h1 class="text-3xl font-bold mb-6 text-center neon-text">Login to CodeCraft</h1>
             <form>
                 <div class="mb-4">
