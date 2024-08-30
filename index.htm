@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>CodeCraft Gaming</title>
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
@@ -115,6 +115,34 @@
     #main-content {
       display: none;
     }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .grid {
+        grid-template-columns: 1fr;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      nav ul li {
+        margin-bottom: 10px;
+      }
+      
+      .text-5xl {
+        font-size: 2.5rem;
+      }
+      
+      .text-2xl {
+        font-size: 1.5rem;
+      }
+      
+      .text-xl {
+        font-size: 1.25rem;
+      }
+    }
   </style>
 </head>
 <body class="min-h-screen flex flex-col cyber-grid">
@@ -143,9 +171,9 @@
 
     <!-- Header section -->
     <header class="bg-gray-900 p-4">
-      <nav class="container mx-auto flex justify-between items-center">
-        <a href="index.htm" class="text-2xl font-bold neon-text">CodeCraft</a>
-        <ul class="flex space-x-6">
+      <nav class="container mx-auto flex flex-col md:flex-row justify-between items-center">
+        <a href="index.htm" class="text-2xl font-bold neon-text mb-4 md:mb-0">CodeCraft</a>
+        <ul class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6">
           <li><a href="index.htm" class="hover:text-cyan-400 transition">Home</a></li>
           <li><a href="aboutus.html" class="hover:text-cyan-400 transition">About</a></li>
           <li><a href="blog.html" class="text-cyan-400 transition">Blog</a></li>
@@ -163,7 +191,7 @@
       </div>
 
       <div class="mb-12 text-center hologram">
-        <img src="IMG.jpg" alt="CodeCraft Gaming" class="mx-auto rounded-lg shadow-lg neon-border" style="max-width: 25%; height: auto;">
+        <img src="IMG.jpg" alt="CodeCraft Gaming" class="mx-auto rounded-lg shadow-lg neon-border" style="max-width: 100%; height: auto;">
       </div>
 
       <div class="grid md:grid-cols-2 gap-8">
